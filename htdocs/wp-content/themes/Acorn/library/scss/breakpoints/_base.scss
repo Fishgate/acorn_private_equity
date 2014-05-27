@@ -1130,7 +1130,10 @@ FOOTER STYLES
 	} /* end .footer-links */
 
 
-	.copyright {font-size: 11px;}
+	.copyright {
+            font-size: 11px;
+            text-align: center;
+        }
 
 .footer-nav{
     display: none;

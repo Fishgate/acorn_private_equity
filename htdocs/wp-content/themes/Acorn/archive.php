@@ -5,7 +5,7 @@
 				<div id="inner-content" class="wrap cf">
 
 						<div id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-
+                                                    
 							<?php if (is_category()) { ?>
 								<h1 class="archive-title h2">
 									<span><?php _e( 'Posts Categorized:', 'bonestheme' ); ?></span> <?php single_cat_title(); ?>
@@ -55,7 +55,7 @@
 								</header>
 
 								<section class="entry-content cf">
-
+                                                                        
 									<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
 
 									<?php the_excerpt(); ?>
