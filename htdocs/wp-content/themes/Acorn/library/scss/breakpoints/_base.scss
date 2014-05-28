@@ -191,12 +191,12 @@ h5, .h5 {
 /*********************
 HEADER STYLES
 *********************/
+.cycle-slideshow, #prev, #next {
+    display: none;
+}
 
-/*********************
-HEADER STYLES
-*********************/
 #feature-generic{
-    height: 220px;
+    display: none;
 }
 #feature, #feature-generic{
     position: relative;
@@ -213,30 +213,36 @@ HEADER STYLES
     top: 320px;
     /*outline: 1px solid red;*/
     h1{
-        width: 340px;
+        max-width: 295px;
         color: $white;
         @include muli300;
         line-height: 36px;
         font-size: 38px;
         text-transform: uppercase;
-        left: 50px!important;
+        left: 26px!important;
         top: -100px!important;
         @include textshadow();
+        background: rgba(186, 195, 145, 0.7);
+        padding: 10px;
     }
+    
 }
+
 #next, #prev{
     position: absolute;
     z-index: 1;
-    top: 300px;
+    top: 138px;
     color: $white;
-    padding: 10px 20px;
+    padding: 10px 15px 10px 15px
+;
     background: $black_alpha;
     font-size: 30px;
     &:hover{
-        background: $acorn_green;
+        background: $acorn_green_med;
         cursor: pointer;
     }
 }
+
 #next{right: 0;}
 #prev{left: 0;}
 
@@ -469,7 +475,7 @@ POSTS & CONTENT STYLES
 
 
 #content {
-	/*margin-top: 164px;*/
+	margin: 138px 0 0 0;
         background: $off-white;
 }
 

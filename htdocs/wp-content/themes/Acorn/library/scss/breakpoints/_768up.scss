@@ -30,8 +30,13 @@ LAYOUT & GRID STYLES
 /*********************
 HEADER STYLES
 *********************/
+.cycle-slideshow, #prev, #next {
+    display: block;
+}
+
 #feature-generic{
     height: 220px;
+    display: block;
 }
 #feature, #feature-generic{
     position: relative;
@@ -48,7 +53,7 @@ HEADER STYLES
     top: 320px;
     /*outline: 1px solid red;*/
     h1{
-        width: 340px;
+        /*max-width: 340px;*/
         color: $white;
         @include muli300;
         line-height: 36px;
@@ -64,22 +69,17 @@ HEADER STYLES
     z-index: 1;
     top: 400px;
     color: $white;
-    padding: 10px 20px;
     background: $black_alpha;
     font-size: 30px;
-    &:hover{
-        background: $acorn_green;
-        cursor: pointer;
-    }
 }
 #next{right: 0;}
 #prev{left: 0;}
 
 .floating_home_sidebar{
-    -webkit-box-shadow: -2px 0 1px rgba(0, 0, 0,0.1);
-    -moz-box-shadow: -2px 0 1px rgba(0, 0, 0,0.1);
-    -ms-box-shadow: -2px 0 1px rgba(0, 0, 0,0.1);
-    -o-box-shadow: -2px 0 1px rgba(0, 0, 0,0.1);
+    -webkit-box-shadow: -2px -1px 3px rgba(0,0,0,0.3);
+    -moz-box-shadow: -2px -1px 3px rgba(0,0,0,0.3);
+    -ms-box-shadow: -2px -1px 3px rgba(0,0,0,0.3);
+    -o-box-shadow: -2px -1px 3px rgba(0,0,0,0.3);
     display: block;
     width: 355px;
     @include css-gradient();
@@ -206,7 +206,7 @@ NAVIGATION STYLES
 					border-right: 0;
 					display: block;
 					width: 173px;
-                                        color: $text-color;
+                                        color: white;
                                         text-transform: capitalize;
 					/*border-bottom: 1px solid #ccc;*/
 
@@ -457,4 +457,8 @@ TEAM STYLES
 .home-heading-para{
     line-height: 1em;
     margin-bottom: 20px!important;
+}
+
+#content {
+    margin: 0;
 }

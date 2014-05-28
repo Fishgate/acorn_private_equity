@@ -99,23 +99,7 @@ function loadGravatars() {
       jQuery(this).attr('src',$(this).attr('data-gravatar'));
     });
   
-  //-------------------------------------
-  // center feature info holder
-  //-------------------------------------
-  var neg_info_width = jQuery('.feature-info-holder').width()/2*-1;
-  console.log(neg_info_width);
-  
-  function info_centered(){
-    jQuery('.feature-info-holder').css({marginLeft: neg_info_width, left: '50%'});
-  }
-        
-        //---------- center infos on page load
-        info_centered();
-        //---------- center infos on window resize
-        jQuery(window).resize(function(){
-          neg_info_width = jQuery('.feature-info-holder').width()/2*-1;
-          info_centered();
-        });
+
   }
   
   
@@ -127,21 +111,44 @@ function loadGravatars() {
 */
 jQuery(document).ready(function($) {
 
-//INIT RESMENU
-$('.top-nav').ReSmenu({
-    menuClass:    'responsive_menu',   // Responsive menu class
-    selectId:     'resmenu',          // select ID
-    textBefore:   false,               // Text to add before the mobile menu
-    selectOption: false,               // First select option
-    activeClass:  'current-menu-item', // Active menu li class
-    maxWidth:     768                  // Size to which the menu is responsive
-});
+    viewport = updateViewportDimensions();
+    
+    if (viewport.width >= 480) {
+        //-------------------------------------
+        // center feature info holder
+        //-------------------------------------
+        var neg_info_width = jQuery('.feature-info-holder').width()/2*-1;
+        console.log(neg_info_width);
 
-  /*
-   * Let's fire off the gravatar function
-   * You can remove this if you don't need it
-  */
-  loadGravatars();
+        function info_centered(){
+        jQuery('.feature-info-holder').css({marginLeft: neg_info_width, left: '50%'});
+        }
+
+        //---------- center infos on page load
+        info_centered();
+        //---------- center infos on window resize
+        jQuery(window).resize(function(){
+          neg_info_width = jQuery('.feature-info-holder').width()/2*-1;
+          info_centered();
+        });
+    }
+    
+
+    //INIT RESMENU
+    $('.top-nav').ReSmenu({
+        menuClass:    'responsive_menu',   // Responsive menu class
+        selectId:     'resmenu',          // select ID
+        textBefore:   false,               // Text to add before the mobile menu
+        selectOption: false,               // First select option
+        activeClass:  'current-menu-item', // Active menu li class
+        maxWidth:     768                  // Size to which the menu is responsive
+    });
+
+    /*
+    * Let's fire off the gravatar function
+    * You can remove this if you don't need it
+    */
+    loadGravatars();
 
 
 }); /* end of as page load scripts */

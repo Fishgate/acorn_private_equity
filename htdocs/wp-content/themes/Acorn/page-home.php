@@ -20,14 +20,14 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/library/images/Header_Food-Processing.jpg" alt="Home page feature image" />
                         </div>
 
-                        <span id="prev">&lang;</span>
-                        <span id="next">&rang;</span>
+                        <span id="prev"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Left.png" alt="Previous" /></span>
+                        <span id="next"><img src="<?php echo get_template_directory_uri(); ?>/library/images/Right.png" alt="Next" /></span>
 
                         <div class="wrap feature-info-holder">
                             <div class="slide_infos cycle-slideshow"
                                 data-cycle-fx="slideHorz"
                                 data-cycle-timeout="6000"
-                                data-cycle-slides=">h1"
+                                data-cycle-slides="h1"
                                 data-cycle-prev="#prev"
                                 data-cycle-next="#next"
                             >
@@ -93,8 +93,6 @@
                                                                     <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
 
 								</footer>
-
-								<!-- <?php// comments_template(); ?> -->
 
 							</article>
 

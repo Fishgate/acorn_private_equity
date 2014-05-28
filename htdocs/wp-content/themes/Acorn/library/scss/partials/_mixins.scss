@@ -86,8 +86,8 @@ DROP SHADOW
 TXT SHADOW
 *********************/
 @mixin textshadow(){
-    text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    -moz-text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    -ms-text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
-    -o-text-shadow: 0px 2px 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -moz-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -ms-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    -o-text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
