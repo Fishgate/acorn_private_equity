@@ -199,7 +199,7 @@ HEADER STYLES
 #feature-generic{
     display: none;
 }
-#feature, #feature-generic{
+#feature, #feature-generic{//
     position: relative;
     overflow: hidden;
     img{
@@ -436,6 +436,10 @@ and more scalable.
 /*********************
 POSTS & CONTENT STYLES
 *********************/
+
+
+
+
 .generic-content{
     /*outline: 1px solid red;*/
     border-top: 10px solid transparent;
@@ -448,6 +452,22 @@ POSTS & CONTENT STYLES
         line-height: 30px;
     }
 }
+
+.posts-content {
+
+    h3 {
+        backround: red;
+    }
+
+    hr {
+        margin: 0;
+    }
+
+    h2 {
+        margin: 0 !important;
+    }
+}
+
 .generic-side-nav{
     /*outline: 1px solid red;*/
     padding: 0 0 0 0;
